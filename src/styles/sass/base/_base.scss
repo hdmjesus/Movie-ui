@@ -1,0 +1,36 @@
+* {
+    font-family: Helvetica, Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+   background-color: bisque;
+    
+}
+
+main {
+    width: 100%;
+}
+
+.mt-1 {
+    margin-top: 5px;
+}
+
+.mt-5 {
+    margin-top: 20px;
+}
+
+.mb-1 {
+    margin-bottom: 5px;
+}
+
+.mt-5 {
+    margin-bottom: 20px;
+}
+
+.pointer{
+    cursor: pointer;
+}
