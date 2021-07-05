@@ -1,0 +1,43 @@
+.btn {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 7px 10px 7px 10px;
+    transition: color 0.3s ease;
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        color: darken($color: $white, $amount: 20);
+    }
+   
+}
+.btn-block{width: 100%;}
+.btn-primary{
+    background-color: $primary;
+    border-radius: 2px;
+    color: $white;
+    
+    &:disabled{
+        background-color:lighten($color: $primary, $amount: 15)
+    }
+    &:hover{
+        background-color: darken($color: $primary, $amount: 15);
+    }
+}
+
+.btn-danger{
+    background-color: $button-dangel;
+    border-radius: 2px;
+    color: $white;
+    
+    &:disabled{
+        background-color:lighten($color: $button-dangel, $amount: 15)
+    }
+    &:hover{
+        background-color: darken($color: $button-dangel, $amount: 15);
+    }
+}
+

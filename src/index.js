@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './components/App';
+import { MovieUI } from './MovieUi';
+
 import '@styles/sass/styles.scss';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<MovieUI />, document.getElementById('root'));
