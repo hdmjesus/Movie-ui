@@ -1,43 +1,74 @@
 .btn {
-    background-color: transparent;
-    border: none;
-    color: $white;
-    cursor: pointer;
-    font-size: 12px;
-    padding: 7px 10px 7px 10px;
-    transition: color 0.3s ease;
-    &:focus{
-        outline: none;
-    }
-    &:hover{
-        color: darken($color: $white, $amount: 20);
-    }
-   
+	background-color: transparent;
+	border: none;
+	color: $white;
+	cursor: pointer;
+	font-size: 12px;
+	padding: 7px 10px 7px 10px;
+	transition: color 0.3s ease;
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		color: darken($color: $white, $amount: 20);
+	}
 }
-.btn-block{width: 100%;}
-.btn-primary{
-    background-color: $primary;
-    border-radius: 2px;
-    color: $white;
-    
-    &:disabled{
-        background-color:lighten($color: $primary, $amount: 15)
-    }
-    &:hover{
-        background-color: darken($color: $primary, $amount: 15);
-    }
+.btn-block {
+	width: 100%;
+}
+.btn-primary {
+	background-color: $primary;
+	border-radius: 2px;
+	color: $white;
+
+	&:disabled {
+		background-color: lighten($color: $primary, $amount: 15);
+	}
+	&:hover {
+		background-color: darken($color: $primary, $amount: 15);
+	}
 }
 
-.btn-danger{
-    background-color: $button-dangel;
-    border-radius: 2px;
-    color: $white;
-    
-    &:disabled{
-        background-color:lighten($color: $button-dangel, $amount: 15)
-    }
-    &:hover{
-        background-color: darken($color: $button-dangel, $amount: 15);
-    }
+.btn-danger {
+	background-color: $button-dangel;
+	border-radius: 2px;
+	color: $white;
+
+	&:disabled {
+		background-color: lighten($color: $button-dangel, $amount: 15);
+	}
+	&:hover {
+		background-color: darken($color: $button-dangel, $amount: 15);
+	}
 }
 
+.play-button {
+	display: flex;
+	width: 100px;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+	background-color: $primary;
+	border-radius: 20px;
+	color: $white;
+	cursor: pointer;
+
+	:hover {
+		color: darken($color: $white, $amount: 30);
+	}
+}
+
+.add-list{
+    display: flex;
+	width: 100px;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+	background-color: $white;
+	border-radius: 20px;
+	color: $dark-grey;
+	cursor: pointer;
+    :hover {
+		color: lighten(#6b717f, 20%);
+	}
+}

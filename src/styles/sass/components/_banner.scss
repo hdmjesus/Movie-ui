@@ -1,0 +1,44 @@
+.banner {
+	position: absolute;
+	height: 400px;
+	width: 100%;
+	object-fit: contain;
+	background-color: white;
+    
+}
+
+.banner__details {
+	width: 400px;
+	position: absolute;
+	left: 30px;
+	bottom: 100px;
+}
+
+.banner__details > p {
+	font-size: 50px;
+	text-transform: uppercase;
+	font-family: Arial, 'Courier New', Courier, monospace;
+	font-weight: bold;
+	color: $white;
+}
+
+.banner__buttons {
+	display: flex;
+	width: 55%;
+	justify-content: space-between;
+    margin-top: 20px;
+}
+
+.banner:before{
+        content: '';
+        position: absolute;
+        top:0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+       background:linear-gradient(transparent 90% , $dark-grey 100%) ;
+  
+       box-shadow:15px 15px 20px #000000;
+    }
+
+

@@ -50,21 +50,21 @@ module.exports = {
 				test: /\.(png|gif|jpg|svg|webp|pdf)$/,
 				type: 'asset/resource',
 				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							outputPath: 'assets/',
-						},
-					},
 					// {
-					// 	loader: 'url-loader',
+					// 	loader: 'file-loader',
 					// 	options: {
-					// 		mimetype: 'image/png',
-					// 		limit: 1000,
-					// 		name: '[contenthash].[ext]',
-					// 		outputPath: 'assets',
+					// 		outputPath: 'assets/',
 					// 	},
 					// },
+					{
+						loader: 'url-loader',
+						options: {
+							mimetype: 'image/png',
+							limit: 1000,
+							name: '[contenthash].[ext]',
+							outputPath: 'assets',
+						},
+					},
 				],
 			},
 

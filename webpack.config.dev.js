@@ -44,21 +44,21 @@ module.exports = {
 			},
 			{
 				test: /\.(png|gif|jpg|svg|webp)$/,
-				type: 'asset/resource',
+				exclude: /node_modules/,
 				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							outputPath: 'assets/[name].[ext]',
-						},
-					},
 					// {
-					// 	loader: 'url-loader',
-					// 	// options: {
-					// 	// 	mimetype: 'image/png',
-					// 	// 	limit: 90000,
-					// 	// },
+					// 	loader: 'file-loader',
+					// 	options: {
+					// 		outputPath: 'assets/[name].[ext]',
+					// 	},
 					// },
+					{
+						loader: 'url-loader',
+						// options: {
+						// 	mimetype: 'image/png',
+						// 	limit: 90000,
+						// },
+					},
 				],
 			},
 
