@@ -13,6 +13,9 @@ import fantasyImg from '../../public/assets/images/fatasy.webp';
 import documentalImg from '../../public/assets/images/documental.webp';
 
 import documentalGif from '../../public/assets/images/giphy.gif';
+import fantasyGif from '../../public/assets/images/fantasy.gif'
+import animationGif from '../../public/assets/images/toystory.gif';
+import actionGif from '../../public/assets/images/tron.gif';
 
 export const HomeScreen = () => {
 	const [IsHover, setIsHover] = useState({
@@ -23,42 +26,44 @@ export const HomeScreen = () => {
 	});
 	
 	const movies = useSelector((state) => state.movies);
-	const urlAnimation = 'https://media.giphy.com/media/RpfIXomvjCh8I/giphy.gif';
-	const urlAction =
-		'https://media.giphy.com/media/8PadKgGXNBmMrFn8Ce/giphy.gif';
-	const urlFantsy =
-		'https://media.giphy.com/media/gDU3K2ooKk9VXMBara/giphy.gif';
+
 
 
 	const handleAnimationGifOn = (e) => {
 		if (e.target.alt === 'Fantasy') {
+		
 			setIsHover((state) => {
 				return { ...state, fantasy: true };
 			});
+			
 		} else if (e.target.alt === 'Animation') {
 			setIsHover((state) => {
 				return { ...state, animation: true };
 			});
+			
 		} else if (e.target.alt === 'Action') {
 			setIsHover((state) => {
 				return { ...state, action: true };
 			});
+			
 		} else if (e.target.alt === 'Documental') {
 			
 			setIsHover((state) => {
 				return { ...state, documental: true };
 			});
+			
 		}
 		
 
 	};
 	
 	const handleAnimationGifOff = (e) => {
-		console.log(e.target.alt);
 		if (e.target.alt == 'Fantasy') {
+			
 			setIsHover((state) => {
 				return { ...state, fantasy: false };
 			});
+			
 		} else if (e.target.alt === 'Animation') {
 			setIsHover((state) => {
 				return { ...state, animation: false };
@@ -79,21 +84,21 @@ export const HomeScreen = () => {
 			<Header />
 			<ListGenre>
 				<GenreItem
-					url={!IsHover.animation ? animationImg : urlAnimation}
+					url={!IsHover.animation ? animationImg : animationGif}
 					title='Animation'
 					titles='90'
 					onMouseOver={handleAnimationGifOn}
 					onMouseLeave={handleAnimationGifOff}
 				/>
 				<GenreItem
-					url={!IsHover.action ? actionImg : urlAction}
+					url={!IsHover.action ? actionImg : actionGif}
 					title='Action'
 					titles='50'
 					onMouseOver={handleAnimationGifOn}
 					onMouseLeave={handleAnimationGifOff}
 				/>
 				<GenreItem
-					url={!IsHover.fantasy ? fantasyImg : urlFantsy}
+					url={!IsHover.fantasy ? fantasyImg : fantasyGif}
 					title='Fantasy'
 					titles='20'
 					onMouseOver={handleAnimationGifOn}
