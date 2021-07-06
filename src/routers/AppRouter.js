@@ -43,23 +43,23 @@ export const AppRouter = () => {
     }
     
     return (
-      <Router>
-        <>
-          <Switch>
-            <PublicRoute
-              path="/auth"
-              component={AuthRouter}
-              isAuthenticated={IsLoginIn}
-            />
-            <PrivateRoute
-              exact
-              path="/"
-              component={HomeScreen}
-              isAuthenticated={IsLoginIn}
-            />
-          </Switch>
-        </>
-      </Router>
-    );
+			<Router>
+				<>
+					<Switch>
+						<PublicRoute
+							path='/auth'
+							component={AuthRouter}
+							isAuthenticated={IsLoginIn}
+						/>
+						<PrivateRoute
+							exact
+							path='/'
+							component={HomeScreen}
+							isAuthenticated={IsLoginIn}
+						/>
+					</Switch>
+				</>
+			</Router>
+		);
   };
   
