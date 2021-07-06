@@ -42,44 +42,43 @@ export const LoginScreen = () => {
     dispatch(startGoogleLogin());
   };
   return (
-    <>
-      <h3 className="auth__title">Login</h3>
+		<>
+			<h3 className='auth__title'>Login</h3>
 
-      <form action="" onSubmit={handleLogin}>
-        <input
-          className="auth__input"
-          type="text"
-          placeholder="E-mail"
-          name="email"
-          autoComplete="off"
-          value={email}
-          onChange={HandleInputChange}
-        />
-        <input
-          className="auth__input"
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-          onChange={HandleInputChange}
-        />
-        <button
-          className=" auth__btn btn btn-primary btn-block"
-          type="submit"
-          disabled={loading}
-        >
-          Login
-        </button>
+			<form action='' onSubmit={handleLogin}>
+				<input
+					className='auth__input'
+					type='text'
+					placeholder='E-mail'
+					name='email'
+					autoComplete='off'
+					value={email}
+					onChange={HandleInputChange}
+				/>
+				<input
+					className='auth__input'
+					type='password'
+					name='password'
+					placeholder='Password'
+					value={password}
+					onChange={HandleInputChange}
+				/>
+				<button
+					className=' auth__btn btn btn-primary btn-block'
+					type='submit'
+					disabled={loading}>
+					Login
+				</button>
 
-        <hr />
-        <div className="auth__social-networks">
-          <p>Login with social networks</p>
-          <GoogleBtn handleGoogleLogin={handleGoogleLogin} />
-        </div>
-        <Link to="/auth/register" className="auth__link-register link">
-          Create new account
-        </Link>
-      </form>
-    </>
-  );
+				<hr />
+				<div className='auth__social-networks'>
+					<p>Login with social networks</p>
+					<GoogleBtn handleGoogleLogin={handleGoogleLogin} />
+				</div>
+				<Link to='/auth/register' className='auth__link-register link'>
+					Create new account
+				</Link>
+			</form>
+		</>
+	);
 };
