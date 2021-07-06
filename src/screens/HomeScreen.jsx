@@ -12,6 +12,8 @@ import animationImg from '../../public/assets/images/animation.webp';
 import fantasyImg from '../../public/assets/images/fatasy.webp';
 import documentalImg from '../../public/assets/images/documental.webp';
 
+import documentalGif from '../../public/assets/images/giphy.gif';
+
 export const HomeScreen = () => {
 	const [IsHover, setIsHover] = useState({
 		animation: false,
@@ -26,21 +28,48 @@ export const HomeScreen = () => {
 		'https://media.giphy.com/media/8PadKgGXNBmMrFn8Ce/giphy.gif';
 	const urlFantsy =
 		'https://media.giphy.com/media/gDU3K2ooKk9VXMBara/giphy.gif';
-	const urlNatural = 'https://media.giphy.com/media/E9A4ai8H2flqo/giphy.gif';
+
 
 	const handleAnimationGifOn = (e) => {
 		if (e.target.alt === 'Fantasy') {
 			setIsHover((state) => {
 				return { ...state, fantasy: true };
 			});
+		} else if (e.target.alt === 'Animation') {
+			setIsHover((state) => {
+				return { ...state, animation: true };
+			});
+		} else if (e.target.alt === 'Action') {
+			setIsHover((state) => {
+				return { ...state, action: true };
+			});
+		} else if (e.target.alt === 'Documental') {
+			
+			setIsHover((state) => {
+				return { ...state, documental: true };
+			});
 		}
+		
 
 	};
 	
 	const handleAnimationGifOff = (e) => {
+		console.log(e.target.alt);
 		if (e.target.alt == 'Fantasy') {
 			setIsHover((state) => {
 				return { ...state, fantasy: false };
+			});
+		} else if (e.target.alt === 'Animation') {
+			setIsHover((state) => {
+				return { ...state, animation: false };
+			});
+		} else if (e.target.alt === 'Action') {
+			setIsHover((state) => {
+				return { ...state, action: false };
+			});
+		} else if (e.target.alt === 'Documental') {
+			setIsHover((state) => {
+				return { ...state, documental: false };
 			});
 		}
 	};
@@ -71,7 +100,7 @@ export const HomeScreen = () => {
 					onMouseLeave={handleAnimationGifOff}
 				/>
 				<GenreItem
-					url={!IsHover.documental ? documentalImg : urlNatural}
+					url={!IsHover.documental ? documentalImg : documentalGif}
 					title='Documental'
 					titles='36'
 					onMouseOver={handleAnimationGifOn}
