@@ -6,7 +6,15 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
 	entry: {
-		modules: ['react', 'react-dom'],
+		modules: [
+			'react',
+			'react-dom',
+			'firebase',
+			'react-redux',
+			'redux',
+			'redux-thunk',
+			'react-router-dom',
+		],
 	},
 
 	output: {
