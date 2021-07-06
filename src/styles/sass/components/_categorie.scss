@@ -1,0 +1,87 @@
+.categorie {
+	overflow: scroll;
+	padding-left: 30px;
+	width: 100%;
+	position: relative;
+	overflow-y: hidden;
+
+    height: 300px;
+}
+
+.categorie::-webkit-scrollbar {
+	display: none;
+
+
+}
+
+.categorie__title {
+    color: $white;
+	margin-left: 30px;
+}
+
+.categorie__container {
+	transition: 450ms -webkit-transform;
+	transition: 450ms transform;
+	transition: 450ms transform, 450ms -webkit-transform;
+	font-size: 0;
+	white-space: nowrap;
+	margin: 30px 0px;
+	padding-bottom: 10px;
+}
+
+.categorie__container:hover .categorie__item{
+    opacity: 0.3;
+}
+
+.categorie__container:hover .categorie__item:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.categorie__item {
+    background: $google-blue;
+    border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	height: 200px;
+	margin-right: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: 450ms all;
+	-webkit-transform-origin: center left;
+	transform-origin: center left;
+}
+
+.item-image{
+
+    width: 150px;
+    height: 200px;
+	object-fit: cover;
+    position: relative;
+}
+
+.categorie-buttons{
+    font-size: 10px;
+    display: flex; 
+    gap: 7px;
+  position: absolute;
+  z-index: 100;
+  bottom: 25px;
+  left: 10px;
+  .play-button{
+      width: 60px;
+  }
+  .add-list{
+      width: 60px;
+  }
+  .remove-list{
+	  width: 60px;
+  }
+}
+.categorie__item:hover ~ .categorie__item {
+	-webkit-transform: translate3d(100px, 0, 0);
+	transform: translate3d(100px, 0, 0);
+}

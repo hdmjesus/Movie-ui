@@ -72,3 +72,18 @@
 		color: lighten(#6b717f, 20%);
 	}
 }
+
+.remove-list{
+	 display: flex;
+	width: 100px;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+	background-color: $button-dangel;
+	border-radius: 20px;
+	color: $white;
+	cursor: pointer;
+    :hover {
+		color: lighten(#6b717f, 20%);
+	}
+}

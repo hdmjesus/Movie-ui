@@ -2,11 +2,12 @@ import { types } from "../types/types";
 import { auth, firebase, googleAuthProvider } from "../firebase/config";
 import { finishLoading, startLoading } from "./uiAction";
 import Swal from "sweetalert2";
+import { useDispatch } from 'react-redux';
 
 
 export const startLoginEmailPassword = (email, password) => {
   return (dispatch) => {
-    dispatch(startLoading());
+    useDispatch(startLoading());
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)

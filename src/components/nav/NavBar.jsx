@@ -1,8 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BannerPrincipal } from '../header/Header';
+import { useDispatch, useSelector } from 'react-redux';
+import { startLogout } from '../../actions/authAction';
+import { categotiesLogout } from '../../actions/moviesAction';
 
 export const NavBar = () => {
+	const dispatch = useDispatch();
+	const { auth } = useSelector((state) => state);
+	const handleLogout = () => {
+		dispatch(startLogout());
+		dispatch(categotiesLogout());
+	};
     return (
 			<div>
 				<header className='header'>
@@ -22,14 +29,15 @@ export const NavBar = () => {
 							/>
 						</figure>
 						<ul className='user__info'>
-							<li>Jesus Hernandez</li>
+						<li>{ auth.name}</li>
 							<li>
-								<a className=''>Logout</a>
+								<a className='' onClick={handleLogout}>
+									Logout
+								</a>
 							</li>
 						</ul>
 					</div>
-            </header>
-            
+				</header>
 			</div>
 		);
 };
