@@ -31,6 +31,9 @@
 
 .categorie__container:hover .categorie__item{
     opacity: 0.3;
+	  @media screen and (max-width: 600px) {
+	opacity: 1;
+		}
 }
 
 .categorie__container:hover .categorie__item:hover {

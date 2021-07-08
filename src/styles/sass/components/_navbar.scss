@@ -6,7 +6,11 @@
 	height: 80px;
 	padding: 20px;
 	position: fixed;
-	&__nav {
+	@media screen and (max-width: 600px) {
+		position: initial;
+		}
+	&__nav-desktop {
+		
 		color: $white;
 		ul {
 			display: flex;
@@ -24,6 +28,9 @@
 }
 
 .user {
+	@media screen and (max-width: 600px) {
+			
+		}
 	cursor: pointer;
 	position: relative;
 	&__container {
@@ -51,10 +58,10 @@
 		font-size: 12px;
 		li {
 			margin-top: 5px;
-            :hover{
-                 text-decoration: underline;
-                 	color: darken($white, 30);
-            }
+			:hover {
+				text-decoration: underline;
+				color: darken($white, 30);
+			}
 		}
 	}
 }
@@ -62,4 +69,42 @@
 .user:hover > .user__info,
 .user__info:hover {
 	display: block;
+}
+.user-mobile{
+	cursor: pointer;
+	position: relative;
+	width: 100px;
+		right: 1px;
+		color: $white;
+		text-align: right;
+		position: absolute;
+		list-style: none;
+		font-size: 12px;
+			margin-top: 5px;
+}
+.header--nav-mobile{
+	z-index: 3;
+}
+.enlances {
+  z-index: -1;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #32325d;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+.uno {
+  -webkit-clip-path: circle(0% at 100% 0%);
+  clip-path: circle(0% at 100% 0%);
+}
+
+.dos {
+  -webkit-clip-path: circle(150% at 100% 0%);
+  clip-path: circle(150% at 100% 0%);
 }
