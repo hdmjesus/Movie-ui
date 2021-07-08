@@ -17,8 +17,8 @@ module.exports = {
 		clean: true,
 	},
 
-	mode: 'development',
-	watch: true,
+	mode: 'production',
+	// watch: true,
 	devtool: 'source-map',
 
 	resolve: {
