@@ -5,10 +5,8 @@
 	width: 100%;
 	height: 80px;
 	padding: 20px;
-	position: fixed;
-	@media screen and (max-width: 600px) {
-		position: initial;
-		}
+	
+	
 	&__nav-desktop {
 		
 		color: $white;
@@ -28,9 +26,7 @@
 }
 
 .user {
-	@media screen and (max-width: 600px) {
-			
-		}
+	
 	cursor: pointer;
 	position: relative;
 	&__container {
