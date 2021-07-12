@@ -47,23 +47,21 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(png|gif|jpg|svg|webp|pdf)$/,
-				type: 'asset/resource',
+				test: /\.(png|gif|jpg|svg|webp)$/,
+				exclude: /node_modules/,
 				use: [
 					// {
 					// 	loader: 'file-loader',
 					// 	options: {
-					// 		outputPath: 'assets/',
+					// 		outputPath: 'assets/[name].[ext]',
 					// 	},
 					// },
 					{
 						loader: 'url-loader',
-						options: {
-							mimetype: 'image/png',
-							limit: 1000,
-							name: '[contenthash].[ext]',
-							outputPath: 'assets',
-						},
+						// options: {
+						// 	mimetype: 'image/png',
+						// 	limit: 90000,
+						// },
 					},
 				],
 			},
